@@ -5,6 +5,8 @@ go_import_path: github.com/jaegertracing/jaeger
 
 dist: trusty
 
+os: linux
+arch: ppc64le
 matrix:
   include:
   - go: "1.13.x"
@@ -40,59 +42,6 @@ matrix:
     env:
     - HOTROD=true
    
-   - go: "1.13.x"
-     os: linux
-     arch: ppc64le
-    env:
-    - TESTS=true
-    - COVERAGE=true
-  - go: "1.13.x"
-    os: linux
-    arch: ppc64le
-    env:
-    - PROTO_GEN_TEST=true
-  - go: "1.13.x"
-    os: linux
-    arch: ppc64le
-    env:
-    - ALL_IN_ONE=true
-  - go: "1.13.x"
-    os: linux
-    arch: ppc64le
-    env:
-    - CROSSDOCK=true
-  - go: "1.13.x"
-    os: linux
-    arch: ppc64le
-    env:
-      - CROSSDOCK_OTEL=true
-  - go: "1.13.x"
-    os: linux
-    arch: ppc64le
-    env:
-    - DOCKER=true
-    - DEPLOY=true
-  - go: "1.13.x"
-    os: linux
-    arch: ppc64le
-    env:
-    - ES_INTEGRATION_TEST=true
-  - go: "1.13.x"
-    os: linux
-    arch: ppc64le
-    env:
-    - KAFKA_INTEGRATION_TEST=true
-  - go: "1.13.x"
-    os: linux
-    arch: ppc64le
-    env:
-    - CASSANDRA_INTEGRATION_TEST=true
-  - go: "1.13.x"
-    os: linux
-    arch: ppc64le
-    env:
-    - HOTROD=true
-
 services:
   - docker
 
